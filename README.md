@@ -4,6 +4,7 @@
 [hub-download]: https://github.com/duckafire/todo-list/archive/refs/heads/main.zip "zip from gitHUB"
 [lab-download]: https://gitlab.com/duckafire/todo-list/-/archive/main/todo-list-main.zip?ref_type=heads "zip from gitLAB"
 [python-path]: http://stackoverflow.com/questions/76188316/ddg#76188371 "Understanding the PYTHONPATH variable"
+[shebang]: https://en.wikipedia.org/wiki/Shebang_%28Unix%29 "Wikipedia"
 
 ## todo-list
 
@@ -63,11 +64,11 @@ In first case, try replacing `python3` to `python`. Case it do not work, query t
 interpreter documentation and/or check the interpreter installation directory.
 
 In second case, try checking the values of the `PATH` variable of your Operational
-System (run `echo $PATH` or `echo %PATH%`) and/or query the documentation of it, in order
-to obtain solutions already documented about the problem.
+System (run `echo $PATH` or `echo %PATH%`) and/or query the documentation of it, in
+order to obtain solutions already documented about the problem.
 
 > [!NOTE]
-> [What is the `PATH` variables?][path-wiki]
+> [What is the `PATH` variable?][path-wiki]
 
 
 
@@ -114,14 +115,26 @@ python3 todo-list.py
 > [!IMPORTANT]
 > Remember you: the interpreter name can be different.
 
+> [!TIP]
+> If your Operational System supports [*shebang*][shebang], as systems *Unix-like* and
+> *Linux-like*, you can use only:
+>
+> ```
+> ./todo-list.py
+> ```
+>
+> But you still will need of the Python interpreter.
+
 This will print a default help message. Execute `python3 todo-list.py -h` to obtain more
 help information or read the sections below (**I recommend**).
 
 > [!TIP]
-> Having that to go to the project installation directory every time that you want to use
-> this program looks like boring and low. Happily, there is how to improve this through the
-> use of the `PYTHONPATH` Environment Variable, but it is a long topic, so I will put a
-> URL about it [here][python-path] to you.
+> Having that to go to the project installation directory every time that you want to
+> the this program looks like boring and low. Happily, there is how to improve this
+> through the use of the `PYTHONPATH` Environment Variable, but it is a long topic, so
+> I will put a URL about it [here][python-path] to you.
+> This will not work if you using the [*shebang*][shebang], because it depends of other
+> environment variable, the [`PATH`][path-wiki].
 
 
 
