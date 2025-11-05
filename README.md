@@ -1,1 +1,130 @@
+[cli-wiki]: https://en.wikipedia.org/wiki/Command-line_interface "What is a cli?"
+[path-wiki]: https://en.wikipedia.org/wiki/PATH_(variable) "Wikipedia"
+[git-home]: https://git-scm.com/ "Git website home"
+[hub-download]: https://github.com/duckafire/todo-list/archive/refs/heads/main.zip "zip from gitHUB"
+[lab-download]: https://gitlab.com/duckafire/todo-list/-/archive/main/todo-list-main.zip?ref_type=heads "zip from gitLAB"
+[python-path]: http://stackoverflow.com/questions/76188316/ddg#76188371 "Understanding the PYTHONPATH variable"
+
 ## todo-list
+
+This project has as aim to available a safe, easy, and fast way to manager *to do lists*
+through the use of a terminal [cli][cli-wiki].
+
+Python was chosen as base language to this project because of its alignment to the
+proposal of it (what they already were cited) and because of the high portability of
+the language between different Operational System.
+
+The code of this project aims to align it to the main conventions disseminated by the
+community of that programming language, in order to welcome possible contributors that
+can collaborate to the evolution of this project.
+
+
+
+### Installing
+
+#### Python
+
+As said earlier, this project was written using Python3, therefore, to execute it, it is
+necessary to install its interpreter, what it can be done via the commands below:
+
+```
+# debian based
+sudo apt install python3
+
+# archlinux based
+sudo pacman -S python3
+
+# fedora based
+sudo dnf install python3
+```
+
+If your Operational System do not support the commands above, you have:
+
+* Access the documentation of your Operational System, with emphasize in its package
+  manager.
+
+* Download the interpreter via this URL: <https://www.python.org/downloads/>
+
+After this, access the terminal (like: CMD; xTerm) of your Operational System and
+execute the command below:
+
+```
+python3 --version
+```
+
+If the interpreter version was shown, it means that the interpreter was installed with
+success. Else, if an error similar with `Command not found: "python3"` was shown, it
+means that anything wrong occurred. There are two main reasons to it.
+
+1. The interpreter executable has other name.
+1. The interpreter was not correctly installed.
+
+In first case, try replacing `python3` to `python`. Case it do not work, query the
+interpreter documentation and/or check the interpreter installation directory.
+
+In second case, try checking the values of the `PATH` variable of your Operational
+System (run `echo $PATH` or `echo %PATH%`) and/or query the documentation of it, in order
+to obtain solutions already documented about the problem.
+
+> [!NOTE]
+> [What is the `PATH` variables?][path-wiki]
+
+
+
+#### Project
+
+Now it is time to download this project. You can to do this of two ways:
+
+Installing via [Git][git-home] through of a of the commands below (via terminal):
+
+```
+# from gitHUB
+git clone https://github.com/duckafire/todo-list.git
+
+# from gitLAB
+git clone https://gitlab.com/duckafire/todo-list.git
+```
+
+Or through of the URL below:
+
+* [From GitHub][hub-download]
+* [From GitLab][lab-download]
+
+> [!TIP]
+> Remember of to extract the downloaded file. Your Operational System probably will
+> have a native tool to do it. Case it do not have, you can query its documentation,
+> in search of packages/programs to execute this work.
+
+
+
+### Executing
+
+Now that all it is in your machine, you can access the directory of this projects (that
+it had downloaded earlier) via of a terminal.
+
+> [!TIP]
+> Use the command `cd`. Try `cd -h` or `cd -?`.
+
+After this, execute the command below:
+
+```
+python3 todo-list.py
+```
+
+> [!IMPORTANT]
+> Remember you: the interpreter name can be different.
+
+This will print a default help message. Execute `python3 todo-list.py -h` to obtain more
+help information or read the sections below (**I recommend**).
+
+> [!TIP]
+> Having that to go to the project installation directory every time that you want to use
+> this program looks like boring and low. Happily, there is how to improve this through the
+> use of the `PYTHONPATH` Environment Variable, but it is a long topic, so I will put a
+> URL about it [here][python-path] to you.
+
+
+
+# How to use
+
+Coming soon...
