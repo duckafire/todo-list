@@ -35,9 +35,6 @@ def invalid_process_flag(arg):
             display.error(f"Invalid use of flag: '{flag}'\n")
 
 def process_flags(*argv):
-    if len(argv) == 0:
-        return
-
     for arg in argv:
         invalid_process_flag(arg)
 
@@ -52,7 +49,7 @@ def process_flags(*argv):
 
 def validate(*argv):
     if len(argv) == 0:
-        info.default()
+        return
 
     info_flags(argv[0])
     process_flags(*argv)

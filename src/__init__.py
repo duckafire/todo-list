@@ -13,10 +13,10 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-
 from .args.validate import validate as validate_args
-from . import info
+from .fileman       import create_todo_list
 
 def main(*argv):
     validate_args(*argv)
+    create_todo_list()
 

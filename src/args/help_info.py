@@ -8,19 +8,6 @@ def pae(msg):
     exit()
 
 
-def default():
-    pae( \
-f"""{info.header()}
-Try: `{info.name()} -h`
-
-{info.copyright()}
-
-This program comes with ABSOLUTELY NO WARRANTY.
-This is free software, and you are welcome to redistribute
-it under certain conditions.
-""")
-
-
 def help():
     pae( \
 f"""{info.name()} [ --help | --license | --version ]
