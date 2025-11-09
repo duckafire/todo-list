@@ -4,7 +4,7 @@ from .      import shell_colors as scolors
 from ..     import info, options
 from ..args import flags
 
-def verbose(color):
+def verbose_info(color):
     if not options.get(flags.VERBOSE):
         return None
 
@@ -28,7 +28,7 @@ def display(color, tag, *args):
     boldc    = getattr(scolors, "BOLD_" + color)
     regularc = getattr(scolors, color)
 
-    verbose(regularc)
+    verbose_info(regularc)
     print(f"{boldc}[{info.name()}: {tag}]{scolors.END}{regularc}", *args)
     print(scolors.END)
 
@@ -42,4 +42,8 @@ def error(*args):
     display("red", "error", *args)
     exit(1)
 
-__all__ = ["message", "warning", "error"]
+def verbose(*args):
+    if options.get(flags.VERBOSE):
+        display("white", "verbose", *args)
+
+__all__ = ["message", "warning", "error", "verbose"]
