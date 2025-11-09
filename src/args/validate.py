@@ -1,6 +1,5 @@
-from .       import flags
+from .       import flags, help_info as info
 from ..      import options
-from .finish import info
 from ..print import display
 
 # they are invalid when used out

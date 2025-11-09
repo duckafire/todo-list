@@ -1,6 +1,6 @@
 from sys import exit
 
-from ... import info
+from .. import info
 
 # Print And Exit
 def pae(msg):
