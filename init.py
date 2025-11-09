@@ -23,6 +23,6 @@ if __name__ != "__main__":
     exit(1)
 
 from sys import argv
-from src import cli
+from src import main
 
-cli( *argv[1:] )
+main( *argv[1:] )

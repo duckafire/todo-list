@@ -13,8 +13,10 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-def cli(*argv):
-    for arg in argv:
-        print(arg)
 
-    print("\nHello world!\n")
+from .args.validate import validate as validate_args
+from . import info
+
+def main(*argv):
+    validate_args(*argv)
+
