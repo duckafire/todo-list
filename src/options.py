@@ -1,4 +1,4 @@
-from sys import exit
+from .print import display
 
 list = {
     "replace": False,
@@ -10,8 +10,7 @@ def is_valid(flag, flag_value = False, arg = None):
         arg = flag[0]
 
     if flag[0] not in list:
-        print(f"Invalid flag: '{arg}'\n")
-        exit(1)
+        display.error(f"Invalid flag: '{arg}'\n")
 
     if flag_value:
         return list[ flag[0] ]
@@ -23,8 +22,7 @@ def set(flag, arg):
     FLAG = is_valid(flag, False, arg)
 
     if list[ FLAG ]:
-        print(f"Flag already used: '{arg}'\n")
-        exit(1)
+        display.error(f"Flag already used: '{arg}'\n")
 
     list[ FLAG ] = True
 

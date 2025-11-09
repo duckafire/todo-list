@@ -1,6 +1,7 @@
 from .       import flags
 from ..      import options
 from .finish import info
+from ..print import display
 
 # they are invalid when used out
 # from the 1st argument position
@@ -29,14 +30,10 @@ def info_flags(arg):
     if is_flag(arg, flags.VERSION):
         info.version()
 
-# TODO: tmp
-from sys import exit
-
 def invalid_process_flag(arg):
     for flag in INVALID_INFO_FLAGS:
         if is_flag(arg, flag):
-            print(f"Invalid use of flag: '{flag}'\n")
-            exit(1)
+            display.error(f"Invalid use of flag: '{flag}'\n")
 
 def process_flags(*argv):
     if len(argv) == 0:
@@ -52,8 +49,7 @@ def process_flags(*argv):
             options.set(flags.VERBOSE, arg)
 
         else:
-            print(f"Invalid flag: '{arg}'\n")
-            exit(1)
+            display.error(f"Invalid flag: '{arg}'\n")
 
 def validate(*argv):
     if len(argv) == 0:
@@ -63,7 +59,7 @@ def validate(*argv):
     process_flags(*argv)
 
     if options.get(flags.VERBOSE):
-        print( options.str(flags.REPLACE) )
-        print( options.str(flags.VERBOSE) )
+        display.message( options.str(flags.REPLACE) )
+        display.message( options.str(flags.VERBOSE) )
 
 __all__ = ["validate"]
