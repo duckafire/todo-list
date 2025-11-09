@@ -24,7 +24,7 @@ it under certain conditions.
 def help():
     pae( \
 f"""{info.name()} [ --help | --license | --version ]
-{info.name()} [ --replace ] [ --version ]
+{info.name()} [ --verbose ] [ --replace ]
 
 -h --help      displays this error message.
 -l --license   displays the program license.
