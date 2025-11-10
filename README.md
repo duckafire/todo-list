@@ -21,6 +21,16 @@ can collaborate to the evolution of this project.
 
 
 
+### Topics
+
+* [Installing](#installing)
+	* [Python](#python)
+	* [Project](#project)
+* [Executing](#executing)
+* [How to use](#how-to-use)
+
+
+
 ### Installing
 
 #### Python
@@ -109,7 +119,7 @@ it had downloaded earlier) via of a terminal.
 After this, execute the command below:
 
 ```
-python3 todo-list.py
+python3 ./todo-list.py --version
 ```
 
 > [!IMPORTANT]
@@ -120,13 +130,13 @@ python3 todo-list.py
 > *Linux-like*, you can use only:
 >
 > ```
-> ./todo-list.py
+> ./todo-list.py --version
 > ```
 >
 > But you still will need of the Python interpreter.
 
-This will print a default help message. Execute `python3 todo-list.py -h` to obtain more
-help information or read the sections below (**I recommend**).
+This will prints the program version. Execute `python3 todo-list.py -h` to obtain help
+information or read the sections below (**I recommend**).
 
 > [!TIP]
 > Having that to go to the project installation directory every time that you want to
@@ -138,6 +148,31 @@ help information or read the sections below (**I recommend**).
 
 
 
-# How to use
+### How to use
 
-Coming soon...
+Now that you know how to execute this project, we will talk about how to use the program.
+Like other [CLI programs][cli-wiki], this has itself *flags*, you can run the command
+below to list them (together with their description):
+
+```
+python3 ./todo-list.py --help
+```
+
+There are two groups of flags, they are:
+
+* Infomation flags:
+	* They must be the fist argument of the program.
+	* They display an information message, and they finish the program with success.
+	* Program will ignore totally other argument (>=2nd) when one of them is used.
+	* Program will generate an error, and it will fail, if one of them is used out of
+	  the first position.
+
+* Action flags:
+	* They allow to control behaviors, process, and other things related with the
+	  *to do list* management.
+	* They can be placed in any argument position.
+	* Repeat them, in the same call, it will generate fatal errors.
+	* Some of them must require an argument, that it must to be placed after it
+	  (e.g: `--flag arg`).
+
+Well, it is all. It is easy, isn't it?
